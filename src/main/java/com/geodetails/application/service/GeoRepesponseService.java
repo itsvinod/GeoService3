@@ -71,7 +71,7 @@ public class GeoRepesponseService {
 	    			if (reMdl.getResults()[0].getFormattedAddressLines() != null
 	    					&& reMdl.getResults()[0].getFormattedAddressLines().length > 2) {
 	    				addrs = reMdl.getResults()[0].getFormattedAddressLines();
-	    				resMsg = addrs[0] + "," + addrs[1] + "," + addrs[2] + ",";
+	    				resMsg = addrs[0] + "," + addrs[1] + "," + addrs[2];
 	    			} else {
 	    				resMsg = "No Full Data Found";
 	    			}

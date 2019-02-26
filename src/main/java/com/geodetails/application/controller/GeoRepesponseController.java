@@ -24,7 +24,7 @@ public class GeoRepesponseController {
 	@Value("${geoapp.errormsg}")
 	String errorMsg;
 	
-	@GetMapping(path = "/geodetails")
+	@GetMapping(path = "/geocode")
 	public Callable<String> getGeoDetails(@RequestParam String ip) throws InterruptedException{
 		return geoRepesponseService.getGeoDetails(ip);
 	}
