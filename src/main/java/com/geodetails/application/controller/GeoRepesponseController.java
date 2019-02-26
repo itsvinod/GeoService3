@@ -37,5 +37,4 @@ public class GeoRepesponseController {
 		//ex.printStackTrace();
 		return errorMsg;
 	}
-
 }
