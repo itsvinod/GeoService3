@@ -12,12 +12,13 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 //java.lang.InterrputedException
 @SuppressWarnings({ "unchecked", "rawtypes" })
-//@ControllerAdvice
+@ControllerAdvice
 public class GeoExceptionHandler extends ResponseEntityExceptionHandler {
 	public final static String ERROR_MSG = "due to high traffic we are not able to handle the request. Please try again later";
 
-	//@ExceptionHandler(Exception.class)
+	@ExceptionHandler(Exception.class)
 	public final ResponseEntity<Object> handleAllExceptions(Exception ex, WebRequest request) {
+		System.out.println(" **** from controller ..... ");
 		List<String> details = new ArrayList<>();
 		// log actual exception - ex.getLocalizedMessage()
 		details.add(ERROR_MSG);
